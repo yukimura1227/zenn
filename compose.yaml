@@ -1,0 +1,14 @@
+services:
+  zenn:
+    image: node:20.11.1-slim
+    volumes:
+      - .:/usr/src/app
+      - node_modules_volume:/usr/src/app/node_modules
+
+    working_dir: /usr/src/app
+    command: >
+      /bin/sh -c
+      "npm install && node --version"
+
+volumes:
+  node_modules_volume:
