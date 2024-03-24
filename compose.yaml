@@ -6,9 +6,13 @@ services:
       - node_modules_volume:/usr/src/app/node_modules
 
     working_dir: /usr/src/app
+
     command: >
       /bin/sh -c
-      "npm install && node --version"
+      "npm install && npx zenn preview"
+
+    ports:
+      - "8000:8000"
 
 volumes:
   node_modules_volume:
