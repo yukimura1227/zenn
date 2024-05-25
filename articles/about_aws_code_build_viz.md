@@ -44,7 +44,12 @@ AWS CodeBuildの実行時間を短縮にチャレンジしていて、その改�
 
 ## 技術的な話
 
-AwsCodeBuildVizは、AWS CodeBuildの実行履歴を取得するためのcliツール部分(Denoベースで、キャッシュ用にDeno KVを利用)と、取得した履歴を可視化するための、可視化ツール部分(DenoベースのViteアプリで、React-TypeScriptを利用)で構成されています。
+AwsCodeBuildVizは、以下の２つの要素で構成されています。
+
+- AWS CodeBuildの実行履歴を取得するためのcliツール部分
+  - Denoベースで、キャッシュ用にDeno KVを利用
+- 取得した履歴を可視化するための、可視化ツール部分
+  - DenoベースのViteアプリで、React-TypeScriptを利用
 
 ### cliツール部分
 
@@ -232,7 +237,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 Deno上でViteアプリを動かす上で、node_modulesをそのまま利用できたため、特筆する事項がないので、利用しているnpmライブラリを紹介して終わります。
 
-フロントエンドの主要ライブラリは以下のとおりです。
+フロントエンドの主要ライブラリ（カッコ部分はメジャーバージョン）は以下のとおりです。
 
 - TypeScript(5)
 - React(18)
