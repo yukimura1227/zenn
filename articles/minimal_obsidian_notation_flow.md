@@ -1,5 +1,5 @@
 ---
-title: "迷わず書ける！最小構成で始める超シンプルなObsidian運用法"
+title: "迷わず書く！最小構成で始める超シンプルなObsidian運用"
 emoji: "🚀"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Obsidian", "Markdown", "pkm", "note", "Zettelkasten"]
