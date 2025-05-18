@@ -1,6 +1,6 @@
 services:
   zenn:
-    image: node:20.11.1-slim
+    image: node:24.0.2-slim
     volumes:
       - .:/usr/src/app
       - node_modules_volume:/usr/src/app/node_modules
