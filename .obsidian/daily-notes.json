@@ -1,0 +1,5 @@
+{
+  "folder": "activityJournals",
+  "template": "_templates/DailyNotesTemplate.md",
+  "format": "YYYY/MM/DD/YYYY-MM-DD"
+}
