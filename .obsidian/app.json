@@ -4,7 +4,7 @@
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "_assets/images",
+  "attachmentFolderPath": "images",
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "promptDelete": false,
