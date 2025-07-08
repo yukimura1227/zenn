@@ -54,3 +54,65 @@ Vim/Neovimには、様々なファイラープラグインが存在します。
 - Vim/Neovim両対応のため、DenoやPythonが必要だったり、ローカル環境が汚染されるのでは？
 - ターゲットユーザーがVimmerに限られているので、長期的に開発が続くのか不安...
 
+### ファイルファインダーに決定版がある
+
+ファイラーで、ファイルを探すこともありますが、大域的に探す場合は、fzf.vimが最強です。
+`:Files <directory>` で、ファイル名で探したり、 `:Rg <keyword>` で、ファイルの内容で検索したり、筆者も長年愛用しています。
+fzf.vimは、Rust製のfzfコマンド、ripgrepコマンド、fdコマンドなど、スタンドアロンで動作するツールを利用しているため、Vim/Neovimのバージョンに依存せず、安定して動作します。また、Pythonのようなランタイムも必要ないため、ローカル環境が汚染されることもありません。
+vimmer以外の方も多く利用しているため、長期的に安定して開発が継続することが期待できます。
+
+### Terminal File Managerのyaziとの出会い
+
+そんな中、Terminal File Managerの `yazi` に出会いました。
+`yazi` は、Rust製の軽量で高速なTerminal File Managerで、
+以下のような特徴があります。
+
+- 高速なファイル操作
+- Vimmer目線で、シンプルで直感的なUI
+- デフォルトでおしゃれ
+- プラグイン不要で即座に使える
+
+とても使いやすく、単独のツールとして利用していたのですが、yaziとVimを統合することで、前述の不安や不満を払拭できるのでは？？？ と思い至り、統合のためのVim Plugin を開発しました。
+
+## yaziの紹介
+
+### yaziとは
+
+[yazi](https://github.com/sxyazi/yazi) は、Rust製の超軽量ターミナルファイルマネージャーです。  
+- **高速なファイル検索**：`fd` や `ripgrep` による、高速で快適なファイル検索が可能  
+- **Vimmer目線で直感的なキーバインド**：`hjkl` での移動や、`s`/`S` でのフィルタリング  
+- **デフォルトでおしゃれ**： アイコン表示など、デフォルトでおしゃれなUI
+- **プラグイン不要で即座に使える**： 追加のプラグインなしで、すぐに使い始められる
+
+### yaziのセットアップ
+
+Vimから利用する上で、yazi本体と、ripgrep, fd, fzfは、必須級なので、それらをインストールします。
+
+Macの場合、Homebrewを使うと簡単にインストールできます。
+
+```bash
+# vimから利用する上で必須のものだけインストール(ripgrep: ファイル内容の高速な検索, fd: 高速なファイル検索, fzf: 高速なファジーファインダー)
+brew install yazi ripgrep fd fzf
+# フルで活用する場合は以下もインストール(ffmpeg: 動画のサムネ表示, 7-Zip: 圧縮ファイルの操作, jq: JSONのPreview, poppler: PDFのPreview, resvg: SVGのPreview, imagemagick: HEIC,jpegのPreview, nerd-font: アイコン表示, zoxide: カレントディレクトリの移動)
+brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick font-symbols-only-nerd-font
+```
+
+他のインストール方法については、[公式ドキュメント](https://yazi-rs.github.io/docs/installation/)を参照してください。
+
+### yaziの基本
+
+Vimから利用するうえで、最低限押さえて起きたいyaziの基本的な操作を紹介します。
+
+(hjklとs,S,zによる検索。あとは、ファイル削除、rename,一括操作を紹介したい)
+
+
+
+## vimとyaziを統合するvim-yazi
+
+### vim-yaziの概要
+
+### vim-yaziのコンセプト
+
+### vim-yaziでできること
+
+## おわりに
