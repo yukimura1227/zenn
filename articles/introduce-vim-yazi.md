@@ -12,8 +12,7 @@ Rust製の超軽量Terminal File Manager `yazi` という素晴らしいファ�
 ファイラープラグインの引越し地獄から脱却したい方、Vim/Neovimで使いやすいファイラーを探している方におすすめです。
 [vim-yazi](https://github.com/yukimura1227/vim-yazi) で公開しているので、よかったら使ってみてください。（issue報告や要望も大歓迎です）
 
-<img alt="vim-yazi-logo" src="/images/introduceVimYazi/vim-yazi-logo.png" width="256px" height="256px"/>
-
+!["vim-yazi-logo"](/images/introduceVimYazi/vim-yazi-logo.png =256x256)
 動作イメージ
 ![vim-yazi-introduce](/images/introduceVimYazi/vim-yazi-introduce.gif)
 
